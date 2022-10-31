@@ -1,0 +1,581 @@
+@charset "utf-8";
+
+
+@media only screen and (min-width: 1300px) {
+
+.web		{display:block !important;}
+.mobile		{display:none}
+
+/* 콘텐츠 */
+
+#background			{position:relative; width:100%; height:100vh; padding-top:200px;}
+#background::after	{content:""; position:absolute; top:0; right:0; z-index:-1; display:block; width:100%; height:524px; background:url('../_img/bg01.png')no-repeat top right}
+#background::before	{content:""; position:absolute; bottom:0; left:0; z-index:-1;  display:block; width:100%; height:375px; background:url('../_img/bg02.png')no-repeat bottom left;}
+
+#background.guide		{padding:100px 0; height:auto;}
+#background.guide .logo	{position:absolute; top:20px; left:20px;}
+
+
+/** 로그인 **/
+.login_box		{margin: 0 auto; max-width:800px; width:90%; background:#fff; padding:80px 50px 90px 50px; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08);}
+.login_box *	{transition:0.3s}
+
+.login_box .logo		{text-align:center}
+.login_box .logo img	{margin:0 20px;}
+
+.login_box .login							{width:100%; max-width:500px; margin:50px auto 0 auto;}
+.login_box .login span						{display:block; margin-bottom:10px; font:500 18px/21px "Noto Sans KR", sans-serif; color:#222}
+.login_box .login input[type="text"]		{width:100%; background:#f5f5f5; padding:18px 20px; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:5px; border:none; outline:2px solid #f5f5f5; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.login_box .login input[type="text"]:focus	{outline:2px solid #bbb;}
+
+.login_box .btn			{width:100%; max-width:500px; margin:0 auto; margin-top:15px;}
+.login_box .btn a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff}
+.login_box .btn a:hover	{background:#222}
+
+.login_box .tel	{text-align:center; margin-top:30px; font:400 16px/21px "Noto Sans KR", sans-serif; color:#999}
+
+
+
+/** 가이드 **/
+.guide_box		{margin: 0 auto; max-width:800px; width:90%; background:#fff; padding:40px 35px; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+
+.guide_box .tit		{font:500 21px/24px "Noto Sans KR", sans-serif; color:#ee7100}
+.guide_box .st		{width:100%; margin-top:40px; border-radius:3px; padding:10px 15px; font:500 17px/24px "Noto Sans KR", sans-serif; color:#b05400; background:#fff6f0}
+.guide_box .st.top	{margin-top:25px;}
+
+.guide_box .st span	{float:right; color:#222}
+.guide_box .st span input[type="checkbox"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+.guide_box .st span input[type="checkbox"] + label					{display: inline-block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 15px/24px "Noto Sans KR", sans-serif; color:#b05400;}
+.guide_box .st span input[type="checkbox"] + label:before			{content: ' '; background:#fff url('../_img/c_off.png')no-repeat 50% 50% / 11px; border: 1px solid #b05400; display: inline-block; border-radius:3px; width: 17px; height: 17px; line-height: 17px; margin: -3px 5px 0 0; text-align: center; vertical-align: middle;}
+.guide_box .st span input[type="checkbox"]:checked + label			{color:#b05400}
+.guide_box .st span input[type="checkbox"]:checked + label:before	{content: ' '; background:#b05400 url('../_img/c_on.png')no-repeat 50% 50% / 11px; border:1px solid #b05400; color:#666;}
+
+.guide_box .cont			{padding:15px 15px 0 15px; font:400 16px/28px "Noto Sans KR", sans-serif; color:#222;}
+.guide_box .cont span.sm_g	{font-size:14px; font-weight:500; color:#999}
+.guide_box .cont span.at_o	{font-weight:500; color:#ee7100}
+.guide_box .dot_list		{margin:12px 0}
+
+
+ul.dot_list						{width:100%; padding:0 10px;}
+ul.dot_list li					{font:400 15px/24px "Noto Sans KR", sans-serif; margin-top:5px; position:relative; padding-left:12px;}
+ul.dot_list li:first-child		{margin-top:0px;}
+ul.dot_list li::before			{content:""; position:absolute; top:12px; left:0; display:block; width:4px; height:4px; border-radius:5px; background:#999}
+
+.sample				{width:100%; max-width:1115px; border:2px solid #ddd; padding:15px; font:400 15px/24px "Noto Sans KR", sans-serif; color:#555;}
+.sample span.tit	{display:block; padding:8px 10px; background:#ddd; font:400 14px/16px "Noto Sans KR", sans-serif; color:#777; margin-bottom:8px;}
+
+#background.guide .sample	{min-width:auto; max-width:auto;}
+
+.start			{margin: 25px auto 0 auto; max-width:800px; width:90%;}
+.start a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff; transition:0.3s}
+.start a:hover	{background:#222}
+
+
+
+/** 설문 **/
+
+/*#survey		{min-width:1300px}*/
+.menu		{position:fixed; width:280px; height:100vh; padding:110px 50px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08);}
+.menu .logo	{position:absolute; top:25px; left:35px;}
+
+.menu ul				{width:100%;}
+.menu ul li				{font:500 17px/21px "Noto Sans KR", sans-serif; color:#999; margin-top:20px; padding-left:22px; position:relative;}
+.menu ul li:first-child	{margin-top:0px;}
+.menu ul li::before		{content:""; position:absolute; top:6px; left:6px; width:1px; height:50px; background:#ddd}
+.menu ul li::after		{content:""; position:absolute; top:6px; left:0; width:13px; height:13px; border-radius:20px; background:#999}
+.menu ul li:last-child::before		{display:none}
+
+
+.menu ul li.sm			{font-size:16px; margin-top:12px;}
+.menu ul li.sm::after	{content:""; position:absolute; top:7px; left:2px; width:9px; height:9px; border-radius:20px; background:#999}
+
+.menu ul li.comp		{color:#0c21c4}
+.menu ul li.comp::after	{background:#0c21c4}
+
+.menu ul li.ing			{color:#ee7100}
+.menu ul li.ing::after	{background:#ee7100}
+
+
+.contents			{width:calc(100%); padding:110px 50px 110px 330px; }
+.contents .tit		{font:600 21px/24px "Noto Sans KR", sans-serif; color:#000}
+
+.contents .Q			{width:100%; margin-top:20px; min-height:51px; background:#f5f5f5; display:flex;}
+.contents .Q span		{margin-right:3px;}
+.contents .Q span.txt	{margin-left:12px; margin-top:2px; font:600 18px/28px "Noto Sans KR", sans-serif; color:#222}
+
+.contents .A		{width:100%; padding:20px 10px;}
+.contents .A.a01	{padding:20px 10px 20px 68px;}
+.contents .A.a02	{padding:20px 10px 20px 92px;}
+.contents .A.a03	{padding:20px 10px 20px 118px;}
+.contents .A.a04	{padding:20px 10px 20px 140px;}
+
+
+.contents .c01	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#ee7100; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c02	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#0d36ab; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c03	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#16a074; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c04	{height:35px; width:70px; text-align:center; padding:8px 0; border-radius:3px; background:#d30640; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c05	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#6c24bc; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c00	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#222; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+
+.contents .Q.c01	{background:#fff6f0; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c02	{background:#eaebf0; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c03	{background:#e6f3ef; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c04	{background:#f5eaed; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c05	{background:#f2ecf8; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c00	{background:#f5f5f5; height:auto; width:auto; padding:8px 10px; text-align:left;}
+
+.s_btn			{width:100%; overflow:hidden; margin-top:30px;}
+.s_btn a		{border-radius:5px;  height:60px; width:150px; padding:18px 25px; font:400 18px/20px "Noto Sans KR", sans-serif; color:#fff; transition:0.3s}	
+.s_btn a.prev	{float:left; text-align:right; border:1px solid #333; color:#333; background:url('../_img/prev.png')no-repeat center left 20px;}
+.s_btn a.next	{float:right; text-align:left; border:1px solid #333; background:#333 url('../_img/next.png')no-repeat center right 20px;}
+.s_btn a.comp	{float:right; text-align:left; border:1px solid #ee7100; background:#ee7100 url('../_img/next.png')no-repeat center right 20px;}
+
+.s_btn a.prev:hover	{background-color:#f5f5f5}
+.s_btn a.next:hover	{background-color:#111; border:1px solid #111;}
+.s_btn a.comp:hover	{background-color:#ee5a00; border:1px solid #ee5a00}
+
+
+input[type="radio"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+input[type="radio"] + label					{display: block; margin:15px 0 0 0; padding-left:35px; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 17px/24px "Noto Sans KR", sans-serif; color:#222;}
+input[type="radio"] + label:before			{content: ' '; position:absolute; top:2px; left:0; background:#fff url('../_img/c_off.png')no-repeat 50% 53% / 12px; border: 2px solid #bbb; display: inline-block; width: 23px; height: 23px; border-radius:30px; line-height: 17px; margin: -3px 5px 0 0; text-align: center; vertical-align: middle;}
+input[type="radio"]:checked + label			{color:#ee7000}
+input[type="radio"]:checked + label:before	{content: ' '; background:#ee7000 url('../_img/c_on.png')no-repeat 50% 53% / 12px; border:2px solid #ee7000;}
+input[type="radio"]:first-child + label		{margin:0;}
+
+input[type="checkbox"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+input[type="checkbox"] + label					{display: block; margin:12px 0 0 0; padding-left:35px; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 17px/24px "Noto Sans KR", sans-serif; color:#222;}
+input[type="checkbox"] + label:before			{content: ' '; position:absolute; top:3px; left:0; background:#fff url('../_img/c_off.png')no-repeat 50% 53% / 12px; border: 2px solid #bbb; display: inline-block; width: 21px; height: 21px; line-height: 17px; margin: -3px 5px 0 0; text-align: center; vertical-align: middle;}
+input[type="checkbox"]:checked + label			{color:#ee7000}
+input[type="checkbox"]:checked + label:before	{content: ' '; background:#ee7000 url('../_img/c_on.png')no-repeat 50% 53% / 12px; border:2px solid #ee7000;}
+input[type="checkbox"]:first-child + label		{margin:0;}
+
+textarea		{width:100%; max-width:1115px; height:150px; padding:10px; border:1px solid #fff; outline:1px solid #e5e5e5; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+textarea:focus	{outline:1px solid #bbb; border:1px solid #bbb;}
+
+.A.float input[type="radio"] + label	{display: inline-block; margin:0px; width:19%; max-width:220px}
+
+.A .sample	{margin:0 0 15px 0;}
+
+.unit	{width:100%; max-width:1115px; text-align:right; font:400 14px/16px "Noto Sans KR", sans-serif; color:#999;}
+
+.A table				{width:100%; max-width:1115px; table-layout:fixed;}
+.A table th				{text-align:left; padding-left:10px; font:500 17px/25px "Noto Sans KR", sans-serif; color:#222}
+.A table th:first-child	{padding-left:0;}
+.A table td								{padding:5px 10px 0 10px;}
+.A table td:first-child					{padding:5px 10px 0 0;}
+.A table td:last-child					{padding:5px 0 0 10px;}
+.A table td input[type="text"]			{width:100%; background:#f5f5f5; padding:18px 20px; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:3px; border:1px solid #e5e5e5; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.A table td input[type="text"]:focus	{outline:1px solid #bbb; border:1px solid #bbb;}
+
+.A table td select				{width:100%; background:#fff url('../_img/select.png')no-repeat right 20px center; padding:18px 20px; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:3px; border:1px solid #fff; outline:1px solid #e5e5e5;  -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+.A table td select:focus		{outline:1px solid #bbb; border:1px solid #bbb;}
+.A table td select::-ms-expand	{display:none;}
+
+
+.filebox					{width:100%; max-width:1115px; background:#f5f5f5; border:1px solid #e5e5e5; padding:5px; border-radius:3px;}
+.filebox input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.filebox label				{display: inline-block;  padding: 10px 12px; font:400 16px/18px "Noto Sans KR", sans-serif; color: #666; background-color: #fff;  cursor: pointer;  border: 1px solid #ddd;  border-radius: 5px;}
+.filebox .upload-name		{display: inline-block; width:calc(100% - 90px); font:400 15px/18px "Noto Sans KR", sans-serif; color: #999; padding-left:10px; background:transparent; border:none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+
+
+.comp_box				{margin: 0 auto; max-width:600px; width:90%; background:#fff; padding:100px 50px 100px 50px; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+.comp_box *				{transition:0.3s}
+.comp_box .text			{text-align:center; margin-bottom:20px; font:400 18px/30px "Noto Sans KR", sans-serif; color:#555}
+.comp_box .text span	{font-size:20px; font-weight:600; display:block; color:#222; margin-bottom:8px;}
+.comp_box .btn			{width:100%; max-width:500px; margin:0 auto; margin-top:20px;}
+.comp_box .btn a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff}
+.comp_box .btn a:hover	{background:#222}
+
+
+
+
+}
+
+
+
+
+@media only screen and (min-width: 960px) and (max-width: 1299px) {
+
+/* 콘텐츠 */
+
+#background			{position:relative; width:100%; height:100vh; padding-top:200px;}
+#background::after	{content:""; position:absolute; top:0; right:0; z-index:-1; display:block; width:100%; height:524px; background:url('../_img/bg01.png')no-repeat top right}
+#background::before	{content:""; position:absolute; bottom:0; left:0; z-index:-1;  display:block; width:100%; height:375px; background:url('../_img/bg02.png')no-repeat bottom left;}
+
+#background.guide		{padding:100px 0; height:auto;}
+#background.guide .logo	{position:absolute; top:20px; left:20px;}
+
+
+/** 로그인 **/
+.login_box		{margin: 0 auto; max-width:800px; width:90%; background:#fff; padding:80px 50px 90px 50px; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08);}
+.login_box *	{transition:0.3s}
+
+.login_box .logo		{text-align:center}
+.login_box .logo img	{margin:0 20px;}
+
+.login_box .login							{width:100%; max-width:500px; margin:50px auto 0 auto;}
+.login_box .login span						{display:block; margin-bottom:10px; font:500 18px/21px "Noto Sans KR", sans-serif; color:#222}
+.login_box .login input[type="text"]		{width:100%; background:#f5f5f5; padding:18px 20px; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:5px; border:none; outline:2px solid #f5f5f5; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.login_box .login input[type="text"]:focus	{outline:2px solid #bbb;}
+
+.login_box .btn			{width:100%; max-width:500px; margin:0 auto; margin-top:15px;}
+.login_box .btn a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff}
+.login_box .btn a:hover	{background:#222}
+
+.login_box .tel	{text-align:center; margin-top:30px; font:400 16px/21px "Noto Sans KR", sans-serif; color:#999}
+
+
+
+/** 가이드 **/
+.guide_box		{margin: 0 auto; max-width:800px; width:90%; background:#fff; padding:40px 35px; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+
+.guide_box .tit		{font:500 21px/24px "Noto Sans KR", sans-serif; color:#ee7100}
+.guide_box .st		{width:100%; margin-top:40px; border-radius:3px; padding:10px 15px; font:500 17px/24px "Noto Sans KR", sans-serif; color:#b05400; background:#fff6f0}
+.guide_box .st.top	{margin-top:25px;}
+
+.guide_box .st span	{float:right; color:#222}
+.guide_box .st span input[type="checkbox"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+.guide_box .st span input[type="checkbox"] + label					{display: inline-block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 15px/24px "Noto Sans KR", sans-serif; color:#b05400;}
+.guide_box .st span input[type="checkbox"] + label:before			{content: ' '; background:#fff url('../_img/c_off.png')no-repeat 50% 50% / 11px; border: 1px solid #b05400; display: inline-block; border-radius:3px; width: 17px; height: 17px; line-height: 17px; margin: -3px 5px 0 0; text-align: center; vertical-align: middle;}
+.guide_box .st span input[type="checkbox"]:checked + label			{color:#b05400}
+.guide_box .st span input[type="checkbox"]:checked + label:before	{content: ' '; background:#b05400 url('../_img/c_on.png')no-repeat 50% 50% / 11px; border:1px solid #b05400; color:#666;}
+
+.guide_box .cont			{padding:15px 15px 0 15px; font:400 16px/28px "Noto Sans KR", sans-serif; color:#222;}
+.guide_box .cont span.sm_g	{font-size:14px; font-weight:500; color:#999}
+.guide_box .cont span.at_o	{font-weight:500; color:#ee7100}
+.guide_box .dot_list		{margin:12px 0}
+
+
+ul.dot_list						{width:100%; padding:0 10px;}
+ul.dot_list li					{font:400 15px/24px "Noto Sans KR", sans-serif; margin-top:5px; position:relative; padding-left:12px;}
+ul.dot_list li:first-child		{margin-top:0px;}
+ul.dot_list li::before			{content:""; position:absolute; top:12px; left:0; display:block; width:4px; height:4px; border-radius:5px; background:#999}
+
+.sample				{width:100%; max-width:1115px; border:2px solid #ddd; padding:15px; font:400 15px/24px "Noto Sans KR", sans-serif; color:#555;}
+.sample span.tit	{display:block; padding:8px 10px; background:#ddd; font:400 14px/16px "Noto Sans KR", sans-serif; color:#777; margin-bottom:8px;}
+
+#background.guide .sample	{min-width:auto; max-width:auto;}
+
+.start			{margin: 25px auto 0 auto; max-width:800px; width:90%;}
+.start a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff; transition:0.3s}
+.start a:hover	{background:#222}
+
+
+
+/** 설문 **/
+
+/*#survey		{min-width:1300px}*/
+.menu		{position:fixed; width:280px; height:100vh; padding:110px 50px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08);}
+.menu .logo	{position:absolute; top:25px; left:35px;}
+
+.menu ul				{width:100%;}
+.menu ul li				{font:500 17px/21px "Noto Sans KR", sans-serif; color:#999; margin-top:20px; padding-left:22px; position:relative;}
+.menu ul li:first-child	{margin-top:0px;}
+.menu ul li::before		{content:""; position:absolute; top:6px; left:6px; width:1px; height:50px; background:#ddd}
+.menu ul li::after		{content:""; position:absolute; top:6px; left:0; width:13px; height:13px; border-radius:20px; background:#999}
+.menu ul li:last-child::before		{display:none}
+
+
+.menu ul li.sm			{font-size:16px; margin-top:12px;}
+.menu ul li.sm::after	{content:""; position:absolute; top:7px; left:2px; width:9px; height:9px; border-radius:20px; background:#999}
+
+.menu ul li.comp		{color:#0c21c4}
+.menu ul li.comp::after	{background:#0c21c4}
+
+.menu ul li.ing			{color:#ee7100}
+.menu ul li.ing::after	{background:#ee7100}
+
+
+.contents			{width:calc(100%); padding:110px 50px 110px 330px; }
+.contents .tit		{font:600 21px/24px "Noto Sans KR", sans-serif; color:#000}
+
+.contents .Q			{width:100%; margin-top:20px; min-height:51px; background:#f5f5f5; display:flex;}
+.contents .Q span		{margin-right:3px;}
+.contents .Q span.txt	{margin-left:12px; margin-top:2px; font:600 18px/28px "Noto Sans KR", sans-serif; color:#222}
+
+.contents .A		{width:100%; padding:20px 10px;}
+.contents .A.a01	{padding:20px 10px 20px 68px;}
+.contents .A.a02	{padding:20px 10px 20px 92px;}
+.contents .A.a03	{padding:20px 10px 20px 118px;}
+.contents .A.a04	{padding:20px 10px 20px 140px;}
+
+
+.contents .c01	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#ee7100; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c02	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#0d36ab; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c03	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#16a074; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c04	{height:35px; width:70px; text-align:center; padding:8px 0; border-radius:3px; background:#d30640; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c05	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#6c24bc; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c00	{height:35px; width:45px; text-align:center; padding:8px 0; border-radius:3px; background:#222; font:400 15px/17px "Noto Sans KR", sans-serif; color:#fff}
+
+.contents .Q.c01	{background:#fff6f0; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c02	{background:#eaebf0; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c03	{background:#e6f3ef; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c04	{background:#f5eaed; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c05	{background:#f2ecf8; height:auto; width:auto; padding:8px 10px; text-align:left;}
+.contents .Q.c00	{background:#f5f5f5; height:auto; width:auto; padding:8px 10px; text-align:left;}
+
+.s_btn			{width:100%; overflow:hidden; margin-top:30px;}
+.s_btn a		{border-radius:5px;  height:60px; width:150px; padding:18px 25px; font:400 18px/20px "Noto Sans KR", sans-serif; color:#fff; transition:0.3s}	
+.s_btn a.prev	{float:left; text-align:right; border:1px solid #333; color:#333; background:url('../_img/prev.png')no-repeat center left 20px;}
+.s_btn a.next	{float:right; text-align:left; border:1px solid #333; background:#333 url('../_img/next.png')no-repeat center right 20px;}
+.s_btn a.comp	{float:right; text-align:left; border:1px solid #ee7100; background:#ee7100 url('../_img/next.png')no-repeat center right 20px;}
+
+.s_btn a.prev:hover	{background-color:#f5f5f5}
+.s_btn a.next:hover	{background-color:#111; border:1px solid #111;}
+.s_btn a.comp:hover	{background-color:#ee5a00; border:1px solid #ee5a00}
+
+
+input[type="radio"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+input[type="radio"] + label					{display: block; margin:15px 0 0 0; padding-left:35px; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 17px/24px "Noto Sans KR", sans-serif; color:#222;}
+input[type="radio"] + label:before			{content: ' '; position:absolute; top:2px; left:0; background:#fff url('../_img/c_off.png')no-repeat 50% 53% / 12px; border: 2px solid #bbb; display: inline-block; width: 23px; height: 23px; border-radius:30px; line-height: 17px; margin: -3px 5px 0 0; text-align: center; vertical-align: middle;}
+input[type="radio"]:checked + label			{color:#ee7000}
+input[type="radio"]:checked + label:before	{content: ' '; background:#ee7000 url('../_img/c_on.png')no-repeat 50% 53% / 12px; border:2px solid #ee7000;}
+input[type="radio"]:first-child + label		{margin:0;}
+
+input[type="checkbox"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+input[type="checkbox"] + label					{display: block; margin:12px 0 0 0; padding-left:35px; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 17px/24px "Noto Sans KR", sans-serif; color:#222;}
+input[type="checkbox"] + label:before			{content: ' '; position:absolute; top:3px; left:0; background:#fff url('../_img/c_off.png')no-repeat 50% 53% / 12px; border: 2px solid #bbb; display: inline-block; width: 21px; height: 21px; line-height: 17px; margin: -3px 5px 0 0; text-align: center; vertical-align: middle;}
+input[type="checkbox"]:checked + label			{color:#ee7000}
+input[type="checkbox"]:checked + label:before	{content: ' '; background:#ee7000 url('../_img/c_on.png')no-repeat 50% 53% / 12px; border:2px solid #ee7000;}
+input[type="checkbox"]:first-child + label		{margin:0;}
+
+textarea		{width:100%; max-width:1115px; height:150px; padding:10px; border:1px solid #fff; outline:1px solid #e5e5e5; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+textarea:focus	{outline:1px solid #bbb; border:1px solid #bbb;}
+
+
+.A .sample	{margin:0 0 15px 0;}
+
+.unit	{width:100%; max-width:1115px; text-align:right; font:400 14px/16px "Noto Sans KR", sans-serif; color:#999;}
+
+.A table				{width:100%; max-width:1115px; table-layout:fixed;}
+.A table th				{text-align:left; padding-left:10px; font:500 17px/25px "Noto Sans KR", sans-serif; color:#222}
+.A table th:first-child	{padding-left:0;}
+.A table td								{padding:5px 10px 0 10px;}
+.A table td:first-child					{padding:5px 10px 0 0;}
+.A table td:last-child					{padding:5px 0 0 10px;}
+.A table td input[type="text"]			{width:100%; background:#f5f5f5; padding:18px 20px; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:3px; border:1px solid #e5e5e5; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.A table td input[type="text"]:focus	{outline:1px solid #bbb; border:1px solid #bbb;}
+
+.A table td select				{width:100%; background:#fff url('../_img/select.png')no-repeat right 20px center; padding:18px 20px; font:400 18px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:3px; border:1px solid #fff; outline:1px solid #e5e5e5;  -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+.A table td select:focus		{outline:1px solid #bbb; border:1px solid #bbb;}
+.A table td select::-ms-expand	{display:none;}
+
+
+.filebox					{width:100%; max-width:1115px; background:#f5f5f5; border:1px solid #e5e5e5; padding:5px; border-radius:3px;}
+.filebox input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.filebox label				{display: inline-block;  padding: 10px 12px; font:400 16px/18px "Noto Sans KR", sans-serif; color: #666; background-color: #fff;  cursor: pointer;  border: 1px solid #ddd;  border-radius: 5px;}
+.filebox .upload-name		{display: inline-block; width:calc(100% - 90px); font:400 15px/18px "Noto Sans KR", sans-serif; color: #999; padding-left:10px; background:transparent; border:none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+
+
+.comp_box				{margin: 0 auto; max-width:600px; width:90%; background:#fff; padding:100px 50px 100px 50px; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+.comp_box *				{transition:0.3s}
+.comp_box .text			{text-align:center; margin-bottom:20px; font:400 18px/30px "Noto Sans KR", sans-serif; color:#555}
+.comp_box .text span	{font-size:20px; font-weight:600; display:block; color:#222; margin-bottom:8px;}
+.comp_box .btn			{width:100%; max-width:500px; margin:0 auto; margin-top:20px;}
+.comp_box .btn a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff}
+.comp_box .btn a:hover	{background:#222}
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 959px) {		
+
+
+.web		{display:none}
+.mobile		{display:block !important;}
+
+
+
+
+/* 콘텐츠 */
+
+#background			{position:relative; width:100%; height:100vh;}
+#background::after	{content:""; position:absolute; top:0; right:0; z-index:-1; display:block; width:100%; height:524px; background:url('../_img/bg01.png')no-repeat top right}
+#background::before	{content:""; position:absolute; bottom:0; left:0; z-index:-1;  display:block; width:100%; height:375px; background:url('../_img/bg02.png')no-repeat bottom left}
+
+#background.guide			{height:auto; padding:65px 0}
+#background.guide .logo		{position:absolute; top:15px; left:15px;}
+#background.guide .logo img	{height:28px}
+
+/** 로그인 **/
+.login_box		{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:92%; padding:50px 25px; background:#fff; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+.login_box *	{transition:0.3s}
+
+.login_box .logo		{text-align:center}
+.login_box .logo img	{margin:0 10px; height:24px}
+
+.login_box .login							{width:100%; max-width:500px; margin:35px auto 0 auto;}
+.login_box .login span						{display:block; margin-bottom:10px; font:500 16px/18px "Noto Sans KR", sans-serif; color:#222}
+.login_box .login input[type="text"]		{width:100%; background:#f5f5f5; padding:15px 20px; font:400 16px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:5px; border:none; outline:2px solid #f5f5f5; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.login_box .login input[type="text"]:focus	{outline:2px solid #bbb;}
+
+.login_box .btn			{width:100%; max-width:500px; margin:0 auto; margin-top:15px;}
+.login_box .btn a		{display:block; width:100%; padding:15px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 16px/18px "Noto Sans KR", sans-serif; color:#fff}
+.login_box .btn a:hover	{background:#222}
+
+.login_box .tel	{text-align:center; margin-top:30px; font:400 13px/18px "Noto Sans KR", sans-serif; color:#999}
+
+
+
+/** 가이드 **/
+.guide_box		{margin: 0 auto; width:92%; padding:25px 15px; background:#fff; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+
+.guide_box .tit		{font:500 18px/24px "Noto Sans KR", sans-serif; color:#ee7100; padding:0 5px;}
+.guide_box .st		{width:100%; margin-top:35px; border-radius:3px; padding:8px 12px; font:600 15px/21px "Noto Sans KR", sans-serif; color:#b05400; background:#fff6f0}
+.guide_box .st.top	{margin-top:20px;}
+
+.guide_box .st span	{float:right; color:#222}
+.guide_box .st span input[type="checkbox"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+.guide_box .st span input[type="checkbox"] + label					{display: inline-block; position: relative; margin:0px; padding-left:22px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:500 13px/18px "Noto Sans KR", sans-serif; color:#b05400;}
+.guide_box .st span input[type="checkbox"] + label:before			{content: ' '; background:#fff url('../_img/c_off.png')no-repeat 50% 50% / 11px; border: 1px solid #b05400; display: inline-block; border-radius:3px; width: 15px; height: 15px; line-height: 15px; margin: -3px 3px 0 0; text-align: center; vertical-align: middle;}
+.guide_box .st span input[type="checkbox"]:checked + label			{color:#b05400}
+.guide_box .st span input[type="checkbox"]:checked + label:before	{content: ' '; background:#b05400 url('../_img/c_on.png')no-repeat 50% 50% / 11px; border:1px solid #b05400; color:#666;}
+
+.guide_box .cont			{padding:10px 8px 0 8px; font:400 14px/25px "Noto Sans KR", sans-serif; color:#222;}
+.guide_box .cont span.sm_g	{display:block; font:500 13px/21px "Noto Sans KR", sans-serif; color:#999}
+.guide_box .cont span.at_o	{font-weight:500; color:#ee7100}
+.guide_box .dot_list		{margin:12px 0}
+
+
+ul.dot_list						{width:100%; padding:0 5px;}
+ul.dot_list li					{font:400 14px/21px "Noto Sans KR", sans-serif; margin-top:5px; position:relative; padding-left:12px;}
+ul.dot_list li:first-child		{margin-top:0px;}
+ul.dot_list li::before			{content:""; position:absolute; top:9px; left:0; display:block; width:4px; height:4px; border-radius:5px; background:#999}
+
+
+#background.guide .sample	{min-width:auto; max-width:auto;}
+
+.start			{margin: 25px auto 0 auto; max-width:800px; width:90%;}
+.start a		{display:block; width:100%; padding:18px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 18px/21px "Noto Sans KR", sans-serif; color:#fff; transition:0.3s}
+.start a:hover	{background:#222}
+
+
+
+/** 설문 **/
+
+
+
+.menu			{position:fixed; top:0; left:0; width:100%; height:90px; padding:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08);}
+.menu .logo		{position:unset; top:auto; left:auto;}
+.menu .logo img	{height:28px;}
+
+.menu ul				{width:100%; margin-top:20px; display:flex; align-items:flex-end}
+.menu ul li				{flex-grow:1; height:5px; background:#eee; text-align: right; font-size:0px; padding-left:22px; position:relative;}
+.menu ul li.comp		{background:#ff7100}
+.menu ul li.ing			{background:#ff7100}
+.menu ul li:first-child	{border-radius:10px 0 0 10px;}
+.menu ul li:last-child	{border-radius:0 10px 10px 0;}
+
+.menu ul li:before	{display:none;}
+.menu ul li:after	{display:none}
+
+
+
+.contents			{position:fixed; width:100%; height:100%; overflow-y:auto; top:90px; padding:25px 15px 120px 15px;}
+.contents .tit		{font:600 18px/21px "Noto Sans KR", sans-serif; color:#000}
+
+
+.contents .Q				{width:100%; margin-top:20px; min-height:38px; padding:5px; background:#f5f5f5; display:flex;}
+.contents .Q span		{margin-right:3px;}
+.contents .Q span.txt	{margin-left:6px; margin-top:1px; font:600 15px/24px "Noto Sans KR", sans-serif; color:#222}
+
+.contents .A			{width:100%; padding:2px 5px 10px 5px;}
+
+
+.contents .c01	{height:28px; padding:8px; border-radius:3px; background:#ee7100; font:500 12px/12px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c02	{height:28px; padding:8px; border-radius:3px; background:#0d36ab; font:500 12px/12px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c03	{height:28px; padding:8px; border-radius:3px; background:#16a074; font:500 12px/12px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c04	{height:28px; padding:8px; border-radius:3px; background:#d30640; font:500 12px/12px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c05	{height:28px; padding:8px; border-radius:3px; background:#6c24bc; font:500 12px/12px "Noto Sans KR", sans-serif; color:#fff}
+.contents .c00	{height:28px; padding:8px; border-radius:3px; background:#222; font:500 12px/12px "Noto Sans KR", sans-serif; color:#fff}
+
+.contents .Q.c01	{background:#fff6f0; height:auto; padding:5px;}
+.contents .Q.c02	{background:#eaebf0; height:auto; padding:5px;}
+.contents .Q.c03	{background:#e6f3ef; height:auto; padding:5px;}
+.contents .Q.c04	{background:#f5eaed; height:auto; padding:5px;}
+.contents .Q.c05	{background:#f2ecf8; height:auto; padding:5px;}
+.contents .Q.c00	{background:#f5f5f5; height:auto; padding:5px;}
+
+.s_btn			{width:100%; overflow:hidden; margin-top:30px;}
+.s_btn a		{border-radius:3px;  height:54px; width:calc(50% - 4px); padding:17px 20px; font:400 15px/18px "Noto Sans KR", sans-serif; color:#fff; transition:0.3s}	
+.s_btn a.prev	{float:left; text-align:right; border:1px solid #333; color:#333; background:url('../_img/prev.png')no-repeat center left 15px / 7px;}
+.s_btn a.next	{float:right; text-align:left; border:1px solid #333; background:#333 url('../_img/next.png')no-repeat center right 15px / 7px;}
+.s_btn a.comp	{float:right; text-align:left; border:1px solid #ee7100; background:#ee7100 url('../_img/next.png')no-repeat center right 15px / 7px;}
+
+.s_btn a.prev:hover	{background-color:#f5f5f5}
+.s_btn a.next:hover	{background-color:#111; border:1px solid #111;}
+.s_btn a.comp:hover	{background-color:#ee5a00; border:1px solid #ee5a00}
+
+
+input[type="radio"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+input[type="radio"] + label					{display: block; margin:8px 0 0 0; padding-left:30px; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 15px/24px "Noto Sans KR", sans-serif; color:#222;}
+input[type="radio"] + label:before			{content: ' '; position:absolute; top:2px; left:0; background:#fff url('../_img/c_off.png')no-repeat 50% 53% / 12px; border: 2px solid #bbb; display: inline-block; width: 20px; height: 20px; border-radius:30px; line-height: 17px; margin: -1px 5px 0 0; text-align: center; vertical-align: middle;}
+input[type="radio"]:checked + label			{color:#ee7000}
+input[type="radio"]:checked + label:before	{content: ' '; background:#ee7000 url('../_img/c_on.png')no-repeat 50% 53% / 12px; border:2px solid #ee7000;}
+
+input[type="checkbox"]							{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+input[type="checkbox"] + label					{display: block; margin:8px 0 0 0; padding-left:30px; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; font:400 15px/24px "Noto Sans KR", sans-serif; color:#222;}
+input[type="checkbox"] + label:before			{content: ' '; position:absolute; top:3px; left:0; background:#fff url('../_img/c_off.png')no-repeat 50% 53% / 12px; border: 2px solid #bbb; display: inline-block; width: 18px; height: 18px; line-height: 17px; margin: -2px 5px 0 0; text-align: center; vertical-align: middle;}
+input[type="checkbox"]:checked + label			{color:#ee7000}
+input[type="checkbox"]:checked + label:before	{content: ' '; background:#ee7000 url('../_img/c_on.png')no-repeat 50% 53% / 12px; border:2px solid #ee7000;}
+
+textarea		{width:100%; min-width:auto; max-width:auto; margin-top:8px; padding:10px; height:150px; border:1px solid #fff; outline:1px solid #e5e5e5; font:400 15px/21px "Noto Sans KR", sans-serif; color:#222; -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+textarea:focus	{outline:1px solid #bbb; border:1px solid #bbb;}
+
+.A.float									{overflow:hidden;}
+.A.float input[type="radio"] + label		{float:left; width:50%; margin:8px 0 0 0}
+.A.float input[type="checkbox"] + label		{width:100%; margin:8px 0 0 0}
+
+.sample				{width:100%; min-width:auto; max-width:auto; border:2px solid #ddd; padding:10px 12px; font:400 14px/21px "Noto Sans KR", sans-serif; color:#555;}
+.sample span.tit	{display:block; padding:5px 8px; background:#ddd; font:400 13px/17px "Noto Sans KR", sans-serif; color:#777; margin-bottom:8px;}
+
+.A .sample	{margin:8px 0 10px 0;}
+
+.unit	{width:100%; text-align:right; margin-top:8px; font:400 13px/15px "Noto Sans KR", sans-serif; color:#999;}
+.unit + table	{margin-top:0px !important;}
+
+.A table				{width:100%; min-width:auto; max-width:auto; table-layout:fixed; margin-top:8px;}
+.A table th				{text-align:left; padding-left:3px; font:600 15px/25px "Noto Sans KR", sans-serif; color:#222; letter-spacing:-0.5px}
+.A table th:first-child	{padding-left:0;}
+.A table td								{padding:3px 3px 0 3px;}
+.A table td:first-child					{padding:3px 3px 0 0;}
+.A table td:last-child					{padding:3px 0 0 3px;}
+.A table td input[type="text"]			{width:100%; background:#f5f5f5; padding:12px 10px; font:400 15px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:3px; border:1px solid #e5e5e5; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.A table td input[type="text"]:focus	{outline:1px solid #bbb; border:1px solid #bbb;}
+
+.A table td select				{width:100%; background:#fff url('../_img/select.png')no-repeat right 10px center / 10px; padding:12px 25px 12px 10px; font:400 15px/21px "Noto Sans KR", sans-serif; color:#222; border-radius:3px; border:1px solid #fff; outline:1px solid #e5e5e5;  -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+.A table td select:focus		{outline:1px solid #bbb; border:1px solid #bbb;}
+.A table td select::-ms-expand	{display:none;}
+
+
+.filebox					{width:100%; min-width:auto; max-width:auto; margin-top:8px; background:#f5f5f5; border:1px solid #e5e5e5; padding:5px; border-radius:3px;}
+.filebox input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.filebox label				{display: inline-block;  padding: 10px 8px; font:400 14px/16px "Noto Sans KR", sans-serif; color: #666; background-color: #fff;  cursor: pointer;  border: 1px solid #ddd;  border-radius: 5px;}
+.filebox .upload-name		{display: inline-block; width:calc(100% - 80px); font:400 15px/18px "Noto Sans KR", sans-serif; color: #999; padding-left:7px; background:transparent; border:none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+
+
+.comp_box	{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:92%; padding:50px 25px; background:#fff; border-radius:15px; box-shadow:0 0 30px rgba(0, 0, 0, 0.08)}
+.comp_box *	{transition:0.3s}
+
+.comp_box .text			{text-align:center; margin-bottom:20px; font:400 16px/24px "Noto Sans KR", sans-serif; color:#555}
+.comp_box .text span	{font-size:18px; font-weight:600; display:block; color:#222; margin-bottom:8px;}
+.comp_box .btn			{width:100%; max-width:500px; margin:0 auto; margin-top:20px;}
+.comp_box .btn a		{display:block; width:100%; padding:15px 20px; background:#ee7100; border-radius:5px; text-align:center; font:400 16px/18px "Noto Sans KR", sans-serif; color:#fff}
+.comp_box .btn a:hover	{background:#222}
+
+
+
+
+}
+
+
+
+
+
